@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="Header">
-        <h1>Pomodoro Timer</h1>
-        <h2>Time to focus!</h2>
+    <div id="index-Header">
+        <h1 id="index-header1">Pomodoro Timer</h1>
+        <h2 id="index-header2">Time to focus!</h2>
+        <a href="https://www.theodinproject.com/about" target = _blank>Link to external website</a>
+        <a href="settings.html">Settings</a>
     </div>
 
     <div class="content-container">
@@ -20,7 +22,7 @@
         <button id="btnBreak" onclick="setMode('break')">Break</button>
         </div>
 
-        <p id="countdown">Start Timer!</p>
+        <p id="countdown">Start Timer!</p> 
         <button id="btnStart" onclick="startorPauseTimer()">START</button>
     </div>
 </body>

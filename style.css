@@ -5,7 +5,7 @@ body{
     text-align: center;
 }
 
-h1{
+#index-header1{
     font-size: 36px;
     color:rgb(255, 255, 255);
     font-weight: 700;
@@ -17,7 +17,26 @@ h1{
     margin: 40px auto 0 auto;  
 } 
 
-h2{
+#settings-header1{
+    font-size: 36px;
+    color:rgb(255, 255, 255);
+    font-weight: 700;
+    text-align: center;
+    text-transform:uppercase;
+    letter-spacing: 10px;
+    background-color:rgb(48, 48, 48);
+    width: 600px; 
+    margin: 40px auto 0 auto;  
+} 
+
+#index-header2{
+    font-size: 25px;
+    color:rgb(255, 255, 255);
+    font-weight: 200;
+    text-align: center;
+} 
+
+#settings-header2{
     font-size: 25px;
     color:rgb(255, 255, 255);
     font-weight: 200;
@@ -51,7 +70,6 @@ button{
 #countdown{
     font-size: 60px;
     color:rgb(255, 255, 255);
-    font-weight: 200;
     text-align: center;
 }
 
