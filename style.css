@@ -1,76 +1,88 @@
+/* BACKGROUND IMAGE AND GREEN OVERLAY */
 body{
-    background-color:rgb(81, 96, 69);
-    font-family: monospace;
-    color:rgb(255, 255, 255);
-    text-align: center;
+    background: linear-gradient(rgba(33, 34, 32, 0.5), rgba(75, 100, 45, 0.5)), url("focus clock background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
 }
 
-#index-header1{
+/* HEADER 1 PROPERTIES */
+#index-header1, #settings-header1{
     font-size: 36px;
+    font-family: monospace;
     color:rgb(255, 255, 255);
     font-weight: 700;
     text-align: center;
     text-transform:uppercase;
     letter-spacing: 10px;
     background-color:rgb(48, 48, 48);
-    width: 500px; 
     margin: 40px auto 0 auto;  
 } 
 
-#settings-header1{
-    font-size: 36px;
-    color:rgb(255, 255, 255);
-    font-weight: 700;
-    text-align: center;
-    text-transform:uppercase;
-    letter-spacing: 10px;
-    background-color:rgb(48, 48, 48);
-    width: 600px; 
-    margin: 40px auto 0 auto;  
-} 
+#index-header1{width: 500px;}
+#settings-header1{width: 600px;}
 
-#index-header2{
+/* HEADER 2 PROPERTIES */
+#index-header2, #settings-header2{
     font-size: 25px;
-    color:rgb(255, 255, 255);
-    font-weight: 200;
-    text-align: center;
-} 
-
-#settings-header2{
-    font-size: 25px;
-    color:rgb(255, 255, 255);
-    font-weight: 200;
-    text-align: center;
-} 
-
-.content-container{
-    background-color:rgba(168, 168, 168,0.3);
-    padding: 40px;
-    width: 600px; 
-    margin: 0 auto;  
-}
-
-button{
-    background-color:rgb(207, 207, 207);
-    color:rgb(0, 0, 0);
-    font-size:25px;
     font-family: monospace;
-    padding: 10px 25px;
-    cursor: default; 
-    border: none;
-    border-radius: 10px; /* smooth corners */
-}
+    color:rgb(255, 255, 255);
+    font-weight: 200;
+    text-align: center;
+} 
 
+/* POSITION OF FOCUS/BREAK BUTTONS */
 .pomodoro-options{
+    padding: 20px;
     display: flex;
     justify-content: center;
     gap: 20px; 
 }
 
+/* FOCUS/BREAK BUTTON PROPERTIES */
+#btnFocus, #btnBreak{
+    background-color: #367438;  
+    color: #ffffff;
+    font-size:30px;
+    font-family: monospace;
+    padding: 10px 25px;
+    cursor: pointer; 
+    border: none;
+    border-radius: 30px; 
+}
+
+/* START BUTTON PROPERTIES */
+#btnStart{
+    background-color: #709171;  
+    color: #ffffff;
+    font-size:30px;
+    font-family: monospace;
+    padding: 10px 25px;
+    cursor: pointer; 
+    border: none;
+    border-radius: 10px; 
+}
+
+/* POSITION OF START BUTTON */
+#btnStartPos{
+    display: flex;
+    justify-content: center;
+}
+
+/* POSITION AND COLOUR OF COUNTDOWN TIMER */
 #countdown{
     font-size: 60px;
+    font-family: monospace;
     color:rgb(255, 255, 255);
     text-align: center;
+}
+
+/* POSITION OF LINKS */
+#links{
+    display: flex;
+    justify-content: flex-end;
+    font-family: monospace;
 }
 
 

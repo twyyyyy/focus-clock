@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Focus Clock</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div id="index-Header">
-        <h1 id="index-header1">Pomodoro Timer</h1>
-        <h2 id="index-header2">Time to focus!</h2>
-        <a href="https://www.theodinproject.com/about" target = _blank>Link to external website</a>
-        <a href="settings.html">Settings</a>
+    <h1 id="index-header1">Pomodoro Timer</h1>
+    <h2 id="index-header2">Time to focus!</h2>
+    
+    <a id="links" href="settings.html">SETTINGS</a>
+
+    <div class="pomodoro-options">
+        <button id="btnFocus" onclick="setMode('focus')">FOCUS</button>
+        <button id="btnBreak" onclick="setMode('break')">BREAK</button>
     </div>
 
-    <div class="content-container">
-        <div class="pomodoro-options">
-        <button id="btnFocus" onclick="setMode('focus')">Focus</button>
-        <button id="btnBreak" onclick="setMode('break')">Break</button>
-        </div>
-
-        <p id="countdown">Start Timer!</p> 
+    <p id="countdown">Start Timer!</p> 
+    <div id="btnStartPos">
         <button id="btnStart" onclick="startorPauseTimer()">START</button>
     </div>
+
 </body>
 </html>
 
