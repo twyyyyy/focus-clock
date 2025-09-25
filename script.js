@@ -1,5 +1,3 @@
-console.log("Hello world!")
-
 let time = 25 * 60; // minutes * seconds 
 let mode = "focus"; // keeps track of whether youre in focus/break mode 
 let timer = null; // a variable that stores the ID number returned by setInterval()
@@ -18,7 +16,7 @@ function startorPauseTimer(){ // function is designed to handle both start and p
     if (timer){
         clearInterval(timer);
         timer = null;
-        document.getElementById("btnStart").textContent = "START";
+        document.getElementById("btnStart").textContent = "RESUME";
     }
     // START 
     else{
@@ -29,6 +27,10 @@ function startorPauseTimer(){ // function is designed to handle both start and p
 
 // SWITCH BETWEEN FOCUS/BREAK MODE
 function setMode(newMode){
+    if (timer){
+        clearInterval(timer);
+        timer = null;
+    }
     mode = newMode; 
     time = (mode === "focus" ? 25 : 5) * 60; // focus = 25, break = 5 
     updateDisplay();
@@ -44,5 +46,4 @@ function tick(){
         timer = null; // rests the timer variable to null -> no timer is running now 
         document.getElementById("btnStart").textContent = "START"; // sets button back to "START" so user knows they can start the timer again 
     }
-    
 }
