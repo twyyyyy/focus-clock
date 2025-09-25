@@ -26,10 +26,8 @@ body{
     letter-spacing: 10px;
     background-color:rgb(48, 48, 48);
     margin: 0 auto 0 auto;  
+    width: 500px;
 } 
-
-#index-header1{width: 500px;}
-#settings-header1{width: 600px;}
 
 /* HEADER 2 PROPERTIES */
 #index-header2, #settings-header2{
@@ -95,6 +93,17 @@ body{
     text-decoration: none;
     padding: 10px 16px;
     border-radius: 24px;
+    cursor: pointer;
+}
+
+#settingsDlg{
+    font-family: monospace;
+    background: rgba(24,28,22,0.95);
+    color: #fff;
+    border: none;
+}
+
+#closeDlg{
     cursor: pointer;
 }
 

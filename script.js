@@ -47,3 +47,9 @@ function tick(){
         document.getElementById("btnStart").textContent = "START"; // sets button back to "START" so user knows they can start the timer again 
     }
 }
+
+let dlg = document.getElementById('settingsDlg');
+function closeDialog() {
+  dlg.close(); 
+}
+document.getElementById('closeDlg').addEventListener('click', closeDialog);

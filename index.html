@@ -13,7 +13,13 @@
     <h1 id="index-header1">Pomodoro Timer</h1>
     <h2 id="index-header2">Time to focus!</h2>
     
-    <a id="links" href="settings.html" class="btnSettings">SETTINGS</a>
+    <a id="links" href="#" onclick="document.getElementById('settingsDlg').showModal(); return false;" class="btnSettings">SETTINGS</a>
+    <dialog id="settingsDlg">
+        <h1 id="settings-header1">Settings</h1>
+        <label>Focus length</label>
+        <label>Break length</label>
+        <button id="closeDlg">Close</button>
+    </dialog>
 
     <div class="pomodoro-options">
         <button id="btnFocus" onclick="setMode('focus')">FOCUS</button>
