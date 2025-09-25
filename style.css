@@ -103,6 +103,16 @@ body{
     border: none;
 }
 
+#settings-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4); 
+    display: none; /* hides overlay when the page is launched */
+}
+
 #closeDlg{
     cursor: pointer;
 }

@@ -12,8 +12,10 @@
     <img src="tomato.gif" class="gif">
     <h1 id="index-header1">Pomodoro Timer</h1>
     <h2 id="index-header2">Time to focus!</h2>
-    
-    <a id="links" href="#" onclick="document.getElementById('settingsDlg').showModal(); return false;" class="btnSettings">SETTINGS</a>
+
+    <!-- SETTINGS DIALOG -->
+    <div id="settings-overlay"></div>
+    <a id="settingsBtn" href="#" class="btnSettings">SETTINGS</a>
     <dialog id="settingsDlg">
         <h1 id="settings-header1">Settings</h1>
         <label>Focus length</label>

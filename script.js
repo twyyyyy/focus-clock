@@ -48,8 +48,24 @@ function tick(){
     }
 }
 
+// OVERLAY + SETTINGS DIALOG 
 let dlg = document.getElementById('settingsDlg');
+let overlay = document.getElementById('settings-overlay');
+let settingsBtn = document.getElementById('settingsBtn');
+let closeBtn = document.getElementById('closeDlg');
+
+settingsBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    openDialog();
+});
+
+function openDialog() {
+    overlay.style.display = "block";
+    dlg.showModal();
+}
+
 function closeDialog() {
   dlg.close(); 
+  overlay.style.display = "none";
 }
-document.getElementById('closeDlg').addEventListener('click', closeDialog);
+closeBtn.addEventListener('click', closeDialog);
