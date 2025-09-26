@@ -99,20 +99,30 @@ body{
 
 /* SETTINGS BUTTON PROPERTIES */
 #settingsBtn{
-    display: inline-block; /* needed so that the transform property will work on the <a> element */
     font-family: monospace;
-    background: #869d87;
+    background: #d2d2d2;
     color: #fff;
     text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 24px;
+    border-radius: 50%;
     cursor: pointer;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* SETTINGS BUTTON HOVER */
 #settingsBtn:hover{
-    background: #acc9ad;
+    background: #f4f4f4;
     transform: scale(1.05);
+}
+
+#settings-image{
+    width: 30px; 
+    height: 30px;
 }
 
 /* SETTINGS PROPERTIES */
@@ -144,6 +154,7 @@ body{
 
 /* CUSTOM DURATION INPUT PROPERTIES */
 #inputs{
+    font-family: monospace;
     display: flex;
     justify-content: center;
     margin: 10px auto 0; 
@@ -159,9 +170,14 @@ body{
 
 /* CLOSE BUTTON PROPERTIES */
 #closeDlg{
+    font-family: monospace;
     display: block;
     margin: 10px auto;
     cursor: pointer;
+}
+
+#volume-button{
+    font-family: monospace;
 }
 
 

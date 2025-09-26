@@ -15,14 +15,13 @@
     <h2 id="index-header2">Time to focus!</h2>
 
     <div id="settings-overlay"></div>
-    <a id="settingsBtn">SETTINGS</a>
 
     <!-- SETTINGS DIALOG -->
     <dialog id="settingsDlg">
         <h1 id="settings-header1">Settings</h1>
         <div id="labels">
-            <label>Focus length</label>
-            <label>Break length</label>
+            <label>FOCUS LENGTH</label>
+            <label>BREAK LENGTH</label>
         </div>
 
         <div id="inputs">
@@ -31,17 +30,20 @@
         </div>
 
         <div id="volume-setting">
-            <label>Alert Volume</label>
+            <label id="alert-label">ALERT VOLUME</label>
             <input type="range" id="volume" min="0" max="10" value="5">
-            <button onclick="alarm.play()">Test Volume</button>
+            <button id="volume-button" onclick="alarm.play()">TEST VOLUME</button>
         </div>
 
-        <button id="closeDlg">Save</button>
+        <button id="closeDlg">SAVE</button>
     </dialog>
 
     <div class="pomodoro-options">
         <button id="btnFocus" onclick="setMode('focus')">FOCUS</button>
         <button id="btnBreak" onclick="setMode('break')">BREAK</button>
+        <button id="settingsBtn" >
+            <img id="settings-image" src="settings.png">
+        </button>
     </div>
 
     <p id="countdown">Start Timer!</p> 
