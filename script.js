@@ -27,12 +27,18 @@ function startorPauseTimer(){ // function is designed to handle both start and p
 
 // SWITCH BETWEEN FOCUS/BREAK MODE
 function setMode(newMode){
+    let focusInput = document.getElementById('focusInput').value;
+    let breakInput = document.getElementById('breakInput').value;
+
+    let focusLength = parseInt(focusInput) || 25; // fallback to 25 if input is invalid
+    let breakLength = parseInt(breakInput) || 5;   // fallback to 5 if input is invalid
+
     if (timer){
         clearInterval(timer);
         timer = null;
     }
     mode = newMode; 
-    time = (mode === "focus" ? 25 : 5) * 60; // focus = 25, break = 5 
+    time = (mode === "focus" ? focusLength : breakLength) * 60; // focus = 25, break = 5 
     updateDisplay();
     document.getElementById("btnStart").textContent = "START"; // when switching to a new state, reset the button to its original state
 }
@@ -67,5 +73,6 @@ function openDialog() {
 function closeDialog() {
   dlg.close(); 
   overlay.style.display = "none";
+  setMode(mode);
 }
 closeBtn.addEventListener('click', closeDialog);

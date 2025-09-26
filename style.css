@@ -113,7 +113,32 @@ body{
     display: none; /* hides overlay when the page is launched */
 }
 
+#settings-content{
+}
+
+#labels{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 0; 
+    gap: 40px; 
+}
+
+#inputs{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 0; 
+    gap: 40px; 
+}
+
+#volume-setting, #closeDlg{ 
+    text-align: center;
+    margin: 20px auto 0; 
+    gap: 40px; 
+}
+
 #closeDlg{
+    display: block;
+    margin: 10px auto;
     cursor: pointer;
 }
 

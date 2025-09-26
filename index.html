@@ -19,17 +19,17 @@
 
     <dialog id="settingsDlg">
         <h1 id="settings-header1">Settings</h1>
-        <div>
+        <div id="labels">
             <label>Focus length</label>
             <label>Break length</label>
         </div>
 
-        <div>
-            <input type="number" id="focus-min" min="1" max="120" value="25">
-            <input type="number" id="break-min" min="1" max="60" value="5">
+        <div id="inputs">
+            <input id="focusInput" type="number" id="focus-min" min="1" max="120" value="25">
+            <input id="breakInput" type="number" id="break-min" min="1" max="60" value="5">
         </div>
 
-        <div>
+        <div id="volume-setting">
             <label>Alert Volume</label>
             <input type="range" id="volume" min="5" max="60" value="25" step="5">
         </div>
