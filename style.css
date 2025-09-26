@@ -49,7 +49,7 @@ body{
 
 /* FOCUS/BREAK BUTTON PROPERTIES */
 #btnFocus, #btnBreak{
-    background-color: #9ca89d;  
+    background-color: #9ca89dac;  
     color: #ffffff;
     font-size:30px;
     font-family: monospace;
@@ -61,7 +61,7 @@ body{
 
 /* FOCUS/BREAK BUTTON HOVER */
 #btnFocus:hover, #btnBreak:hover{
-    background-color: #bac8bb;  
+    background-color: #bac8bbac;  
     transform: scale(1.05);
 }
 
@@ -100,7 +100,7 @@ body{
 /* SETTINGS BUTTON PROPERTIES */
 #settingsBtn{
     font-family: monospace;
-    background: #d2d2d2;
+    background: #dcdcdcab;
     color: #fff;
     text-decoration: none;
     border-radius: 50%;
@@ -116,7 +116,7 @@ body{
 
 /* SETTINGS BUTTON HOVER */
 #settingsBtn:hover{
-    background: #f4f4f4;
+    background: #fefefeab;
     transform: scale(1.05);
 }
 
@@ -180,5 +180,11 @@ body{
     font-family: monospace;
 }
 
-
-
+#progress {
+  display: block;
+  width: 60%;
+  height: 12px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 8px;
+}
