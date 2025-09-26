@@ -85,8 +85,8 @@ body{
     text-align: center;
 }
 
-/* SETTINGS/MENU BUTTON PROPERTIES */
-.btnSettings, .btnMenu{
+/* SETTINGS BUTTON PROPERTIES */
+.btnSettings{
     font-family: monospace;
     background: #869d87;
     color: #fff;
@@ -96,6 +96,7 @@ body{
     cursor: pointer;
 }
 
+/* SETTINGS PROPERTIES */
 #settingsDlg{
     font-family: monospace;
     background: rgba(24,28,22,0.95);
@@ -103,6 +104,7 @@ body{
     border: none;
 }
 
+/* SETTINGS OVERLAY PROPERTIES */
 #settings-overlay{
     position: fixed;
     top: 0;
@@ -113,9 +115,7 @@ body{
     display: none; /* hides overlay when the page is launched */
 }
 
-#settings-content{
-}
-
+/* CUSTOM DURATION LABEL PROPERTIES */
 #labels{
     display: flex;
     justify-content: center;
@@ -123,6 +123,7 @@ body{
     gap: 40px; 
 }
 
+/* CUSTOM DURATION INPUT PROPERTIES */
 #inputs{
     display: flex;
     justify-content: center;
@@ -130,12 +131,14 @@ body{
     gap: 40px; 
 }
 
-#volume-setting, #closeDlg{ 
+/* VOLUME SETTING PROPERTIES */
+#volume-setting{ 
     text-align: center;
     margin: 20px auto 0; 
     gap: 40px; 
 }
 
+/* CLOSE BUTTON PROPERTIES */
 #closeDlg{
     display: block;
     margin: 10px auto;

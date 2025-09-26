@@ -10,13 +10,14 @@
 
 <body>
     <img src="tomato.gif" class="gif">
+    <audio id="alarm" src="alert.wav" preload="auto"></audio>
     <h1 id="index-header1">Pomodoro Timer</h1>
     <h2 id="index-header2">Time to focus!</h2>
 
-    <!-- SETTINGS DIALOG -->
     <div id="settings-overlay"></div>
-    <a id="settingsBtn" href="#" class="btnSettings">SETTINGS</a>
+    <a id="settingsBtn" class="btnSettings">SETTINGS</a>
 
+    <!-- SETTINGS DIALOG -->
     <dialog id="settingsDlg">
         <h1 id="settings-header1">Settings</h1>
         <div id="labels">
@@ -31,10 +32,11 @@
 
         <div id="volume-setting">
             <label>Alert Volume</label>
-            <input type="range" id="volume" min="5" max="60" value="25" step="5">
+            <input type="range" id="volume" min="0" max="10" value="5">
+            <button onclick="alarm.play()">Test Volume</button>
         </div>
 
-        <button id="closeDlg">Close</button>
+        <button id="closeDlg">Save</button>
     </dialog>
 
     <div class="pomodoro-options">

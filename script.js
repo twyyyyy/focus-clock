@@ -51,28 +51,47 @@ function tick(){
         clearInterval(timer); // stops the repeating setInterval() that was calling tick() every second 
         timer = null; // rests the timer variable to null -> no timer is running now 
         document.getElementById("btnStart").textContent = "START"; // sets button back to "START" so user knows they can start the timer again 
+        let sound = document.getElementById("alarm");
+        sound.play();
     }
 }
 
-// OVERLAY + SETTINGS DIALOG 
+// VOLUME VARIABLES 
+let volumeSlider = document.getElementById('volume');
+let alarm = document.getElementById('alarm');
+
+// CUSTOM VOLUME 
+function updateVolume(){
+    let volumeValue = volumeSlider.value; 
+    alarm.volume = volumeValue / 10; // audio volume property value ranges from 0.0 to 1.0
+}
+volumeSlider.addEventListener('input', updateVolume);
+
+// OVERLAY + SETTINGS DIALOG VARIABLES 
 let dlg = document.getElementById('settingsDlg');
 let overlay = document.getElementById('settings-overlay');
 let settingsBtn = document.getElementById('settingsBtn');
 let closeBtn = document.getElementById('closeDlg');
 
-settingsBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    openDialog();
-});
-
+// OPEN DIALOG BOX 
 function openDialog() {
     overlay.style.display = "block";
     dlg.showModal();
 }
+settingsBtn.addEventListener('click', openDialog);
 
+// SAVES CUSTOM DURATION AND CLOSES DIALOG BOX 
 function closeDialog() {
   dlg.close(); 
-  overlay.style.display = "none";
   setMode(mode);
 }
 closeBtn.addEventListener('click', closeDialog);
+
+// HIDES OVERLAY WHEN ESC IS CLICKED 
+function hideOverlay(){
+    overlay.style.display = 'none';
+}
+dlg.addEventListener('close',hideOverlay);
+
+
+
