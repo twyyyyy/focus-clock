@@ -121,6 +121,3 @@ function hideOverlay(){
     overlay.style.display = 'none';
 }
 dlg.addEventListener('close',hideOverlay);
-
-
-

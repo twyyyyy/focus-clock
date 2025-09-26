@@ -180,11 +180,24 @@ body{
     font-family: monospace;
 }
 
-#progress {
+/* PROGRESS BAR PROPERTIES */
+#progress{
   display: block;
   width: 60%;
   height: 12px;
   margin: 20px auto;
   border: none;
   border-radius: 8px;
+}
+
+/* EMPTY PROGRESS BAR COLOUR */
+#progress::-webkit-progress-bar{
+    background-color: #4d574e; 
+    border-radius: 8px;
+}
+
+/* FILLED PROGRESS BAR COLOUR */
+#progress::-webkit-progress-value{
+    background-color: #87af8b; 
+    border-radius: 8px;
 }
