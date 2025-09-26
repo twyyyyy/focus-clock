@@ -59,6 +59,12 @@ body{
     border-radius: 30px; 
 }
 
+/* FOCUS/BREAK BUTTON HOVER */
+#btnFocus:hover, #btnBreak:hover{
+    background-color: #bac8bb;  
+    transform: scale(1.05);
+}
+
 /* START BUTTON PROPERTIES */
 #btnStart{
     background-color: #595959ac;  
@@ -69,6 +75,12 @@ body{
     cursor: pointer; 
     border: none;
     border-radius: 10px; 
+}
+
+/* START BUTTON HOVER */
+#btnStart:hover{
+    background-color: #767676ac;  
+    transform: scale(1.05);
 }
 
 /* POSITION OF START BUTTON */
@@ -86,7 +98,8 @@ body{
 }
 
 /* SETTINGS BUTTON PROPERTIES */
-.btnSettings{
+#settingsBtn{
+    display: inline-block; /* needed so that the transform property will work on the <a> element */
     font-family: monospace;
     background: #869d87;
     color: #fff;
@@ -94,6 +107,12 @@ body{
     padding: 10px 16px;
     border-radius: 24px;
     cursor: pointer;
+}
+
+/* SETTINGS BUTTON HOVER */
+#settingsBtn:hover{
+    background: #acc9ad;
+    transform: scale(1.05);
 }
 
 /* SETTINGS PROPERTIES */
