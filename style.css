@@ -47,6 +47,11 @@ body{
     gap: 20px; 
 }
 
+.active-mode{
+    background-color: rgba(178, 202, 179, 0.9) !important; /* forces a change in background color during active mode  */
+    box-shadow: 0 0 10px rgb(59, 83, 58);
+}
+
 /* FOCUS/BREAK BUTTON PROPERTIES */
 #btnFocus, #btnBreak{
     background-color: #9ca89dac;  

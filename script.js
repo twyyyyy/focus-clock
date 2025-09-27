@@ -48,6 +48,18 @@ function setMode(newMode){
     time = (mode === "focus" ? focusLength : breakLength) * 60; // focus = 25, break = 5 
     totalSession = time; // update new duration 
 
+    // makes focus/break button light up when selected 
+    const focusBtn = document.getElementById("btnFocus");
+    const breakBtn = document.getElementById("btnBreak");
+
+    if (mode === "focus") {
+        focusBtn.classList.add("active-mode"); // adds a class (in this case, highlight element)
+        breakBtn.classList.remove("active-mode"); // removes the same class 
+    } else {
+        breakBtn.classList.add("active-mode");
+        focusBtn.classList.remove("active-mode");
+    }
+
     reset(); // reset progress bar + countdown display 
     document.getElementById("btnStart").textContent = "START"; // when switching to a new state, reset the button to its original state
 }
@@ -121,3 +133,8 @@ function hideOverlay(){
     overlay.style.display = 'none';
 }
 dlg.addEventListener('close',hideOverlay);
+
+// INITIALIZATION CODE RUNS IMMEDIATELY AFTER LAUNCH -> written at the bottom so the browser already knows what all the variables and functions are 
+setMode("focus");
+reset(); // set max and value = 0
+updateDisplay(); // show 25:00 in the beginning 
