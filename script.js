@@ -138,3 +138,4 @@ dlg.addEventListener('close',hideOverlay);
 setMode("focus");
 reset(); // set max and value = 0
 updateDisplay(); // show 25:00 in the beginning 
+document.addEventListener("DOMContentLoaded", updateVolume); // audio voume starts at 50% instead of the default 100%
