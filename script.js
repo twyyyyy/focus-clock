@@ -74,6 +74,7 @@ function tick(){
     // update progress bar to reflect remaining time 
     let progressUpdate = document.getElementById('progress');
     progressUpdate.value = totalSession - time; 
+    updateTomato(); // keeps tomato in sync each second 
 
     if (time === 0){ // stop timer if countdown has reached zero 
         clearInterval(timer); // stops the repeating setInterval() that was calling tick() every second 
@@ -95,6 +96,7 @@ function reset(){
     progressUpdate.max = totalSession; // sets progress bar's max value to match session's total duration 
     progressUpdate.value = 0; // empty bar so it is ready to fil up in the next session 
     updateDisplay(); 
+    updateTomato(); // move tomato back to start
 }
 
 // VOLUME VARIABLES 
@@ -133,6 +135,27 @@ function hideOverlay(){
     overlay.style.display = 'none';
 }
 dlg.addEventListener('close',hideOverlay);
+
+const progress = document.getElementById('progress');
+const tomato = document.getElementById('tomato');
+
+// SYNCS TOMATO'S POSITION WITH CURRENT PROGRESS
+function updateTomato(){
+    // progress.max -> max value of progress bar
+    // progress.value -> current value 
+    // progress.value / progress.max -> ratio between 0 and 1, representing the percentage completed 
+    // if progress.max exists, use the ratio, else 0. 
+    const pct = progress.max ? progress.value / progress.max : 0; 
+    const trackWidth = progress.clientWidth; // the actual pixel width of progress bar 
+    const tomatoWidth = tomato.offsetWidth; // how wide the tomato image is in pixels -> used to center the tomato on the progress point 
+  
+    // multiply the progress percentage by the track width to find where along the track the tomato should be. 
+    // subtract half of the tomato's width to keep it centered 
+    let x = pct * trackWidth - tomatoWidth / 2;
+
+    // moves the tomato 
+    tomato.style.left = `${x}px`;
+}
 
 // INITIALIZATION CODE RUNS IMMEDIATELY AFTER LAUNCH -> written at the bottom so the browser already knows what all the variables and functions are 
 setMode("focus");

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <img src="tomato.gif" class="gif">
+
     <audio id="alarm" src="alert.wav" preload="auto"></audio>
     <h1 id="index-header1">Pomodoro Timer</h1>
     <h2 id="index-header2">Time to focus!</h2>
@@ -46,7 +46,11 @@
         </button>
     </div>
 
-    <progress id="progress" value="0" max="1"></progress>
+    <div id="progress-container">
+        <img id="tomato" src="tomato.gif" class="gif">
+        <progress id="progress" value="0" max="1"></progress>
+    </div>
+
     <p id="countdown"></p> 
     <div id="btnStartPos">
         <button id="btnStart" onclick="startorPauseTimer()">START</button>
